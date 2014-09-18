@@ -95,6 +95,16 @@
       <groupId>com.jcraft</groupId>
       <artifactId>jsch.agentproxy.connector-factory</artifactId>
       <version>0.0.7</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.jcraft</groupId>
+          <artifactId>jsch.agentproxy.usocket-jna</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.jcraft</groupId>
+          <artifactId>jsch.agentproxy.pageant</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
 

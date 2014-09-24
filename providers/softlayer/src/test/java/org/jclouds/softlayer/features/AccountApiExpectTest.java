@@ -64,7 +64,7 @@ public class AccountApiExpectTest extends BaseSoftLayerApiExpectTest {
    public void testGetBlockDeviceTemplateGroupsWhenResponseIs2xx() {
 
       HttpRequest getVirtualGuestBlockDeviceTemplateGroup = HttpRequest.builder().method("GET")
-              .endpoint("https://api.softlayer.com/rest/v3/SoftLayer_Account/getBlockDeviceTemplateGroups?objectMask=children.blockDevices.diskImage.softwareReferences.softwareDescription")
+              .endpoint("https://api.softlayer.com/rest/v3/SoftLayer_Account/getBlockDeviceTemplateGroups?objectMask=mask%5BglobalIdentifier,children.blockDevices.diskImage.softwareReferences.softwareDescription%5D")
               .addHeader("Accept", "application/json")
               .addHeader("Authorization", "Basic aWRlbnRpdHk6Y3JlZGVudGlhbA==").build();
 
@@ -80,7 +80,7 @@ public class AccountApiExpectTest extends BaseSoftLayerApiExpectTest {
    public void testGetBlockDeviceTemplateGroupsWhenResponseIs4xx() {
 
       HttpRequest getObjectRequest = HttpRequest.builder().method("GET")
-              .endpoint("https://api.softlayer.com/rest/v3/SoftLayer_Account/getBlockDeviceTemplateGroups?objectMask=children.blockDevices.diskImage.softwareReferences.softwareDescription")
+              .endpoint("https://api.softlayer.com/rest/v3/SoftLayer_Account/getBlockDeviceTemplateGroups?objectMask=mask%5BglobalIdentifier,children.blockDevices.diskImage.softwareReferences.softwareDescription%5D")
               .addHeader("Accept", "application/json")
               .addHeader("Authorization", "Basic aWRlbnRpdHk6Y3JlZGVudGlhbA==").build();
 
